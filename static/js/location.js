@@ -11,11 +11,11 @@ function showPosition(position) {
     lat = position.coords.latitude;
     lon = position.coords.longitude;
     latlon = new google.maps.LatLng(lat, lon)
-    var width = window.screen.availWidth * (.7);
+    var width = window.screen.availWidth * .5;
     var height = width * .5;
     mapholder = document.getElementById('mapholder')
     mapholder.style.height = height+'px';
-    mapholder.style.width = width;
+    mapholder.style.width = width+'px';
 
     var myOptions = {
     center:latlon,zoom:14,
