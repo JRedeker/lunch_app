@@ -30,7 +30,7 @@ function showPosition(position) {
 }
 
 function updateAddress(latlon) {
-    var address = $.ajax("http://maps.googleapis.com/maps/api/geocode/json?latlng=44.4647452,7.3553838&sensor=true)");
+    var address = $.ajax("https://maps.googleapis.com/maps/api/geocode/json?latlng=44.4647452,7.3553838&sensor=true)");
     console.log(address);
 
     
