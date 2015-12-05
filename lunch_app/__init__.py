@@ -10,9 +10,13 @@ def index():
 def page_not_found(e):
     return render_template('404.html')
 
+@app.errorhandler(500)
+def page_not_found(e):
+    return render_template('500.html')
+
 @app.route("/test")
 def test():
-    return "Test Page"
+    return render_template('500.html')
 
 
 if __name__ == "__main__":
