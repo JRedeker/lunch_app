@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lunch App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="{{ url_for('static',filename='js/jquery-2.1.4.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/location.js') }}"></script>
+    <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap-theme.min.css') }}">
+</head>
+<body onload="getLocation()">
+
+<div class="container-fluid">
+	<div class="header clearfix">
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+				</div>
+			</div>	
+		</nav>
+	</div>
+	<div class="container" style="max-width:960px">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">Your Location</span>
+                    <input type="text" id="user_location" class="form-control" placeholder="1234 parkway" aria-describedby="basic-addon1">
+                    <span class="input-group-btn">
+                    	<button class="btn btn-default" type="button" onclick="getLocation()">Get location</button>
+                	</span>
+                </div>
+			</div>
+		</div>
+		<div class="row" style="margin-top:15px">
+			<div class="col-md-12">
+				<div id="mapholder"></div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
