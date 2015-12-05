@@ -24,15 +24,25 @@ function showPosition(position) {
     navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
     }
     
-    updateAddress(latlon);
+    
     var map = new google.maps.Map(document.getElementById("mapholder"), myOptions);
     var marker = new google.maps.Marker({position:latlon,map:map,title:"You are here!"});
+
+    updateAddress(lat,lon);
+    
 }
 
-function updateAddress(latlon) {
-    var address = $.ajax("https://maps.googleapis.com/maps/api/geocode/json?latlng=44.4647452,7.3553838&sensor=true)");
-    console.log(address);
+function updateAddress(lat,lon) {
 
+    var addressresult = "";
+
+    $.ajax({
+        url: "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + lon + "&sensor=true)",
+        success: function(data) {
+            $("#user_location").val(data.results[0].formatted_address);
+        }
+    })
+    return addressresult;
     
 }
 
