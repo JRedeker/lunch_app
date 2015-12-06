@@ -17,7 +17,6 @@ function showPosition(position) {
     latlon = new google.maps.LatLng(lat, lon)
     var width = window.innerWidth * .8;
     //var width = window.screen.availWidth * .8;
-    console.log(width);
     var height = width * .5;
     mapholder = document.getElementById('mapholder')
     mapholder.style.height = height+'px';
