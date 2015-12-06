@@ -6,9 +6,11 @@
 }
 
 
-.container{
+.customnavbar{
 
-	margin-top:100px;
+	background: #00796B;
 
-
+}
+.navbar-default .navbar-brand {
+    color: #fff;
 }

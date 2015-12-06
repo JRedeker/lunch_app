@@ -1,63 +1,88 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>Lunch App</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="{{ url_for('static',filename='js/jquery-2.1.4.min.js') }}"></script>
-    <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
-    <script src="{{ url_for('static',filename='js/location.js') }}"></script>
-    <script src="{{ url_for('static',filename='js/request.js') }}"></script>
-    <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap-theme.min.css') }}">
-</head>
-<body onload="getLocation()">
+	<head>
+	    <title>Lunch App</title>
 
-<div class="container-fluid">
-	<div class="header clearfix">
-		<nav class="navbar navbar-inverse">
-			<div class="container-fluid">
-				<div class="navbar-header">
-				</div>
-			</div>	
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <script src="{{ url_for('static',filename='js/jquery-2.1.4.min.js') }}"></script>
+	    <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+	    <script src="{{ url_for('static',filename='js/location.js') }}"></script>
+	    <script src="{{ url_for('static',filename='js/request.js') }}"></script>
+	    <script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+	    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+	    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/bootstrap-theme.min.css') }}">
+	    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+
+	</head>
+
+	<header>
+		<nav class="customnavbar navbar navbar-default">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="textcolors navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class=" navbar-brand textcolors" href="/">Lunch App</a>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		        
+		          
+		      </ul>
+		      
+		     
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
 		</nav>
+
+
+	</header>
+
+
+
+
+	<div class="container-fluid">
+		
+		<div class="container">
+			
+			<div class="row">
+				<div class="col-xs-10 col-xs-offset-1">
+					<div class="input-group" style="float:none">
+	                    <span class="input-group-addon" id="basic-addon1">Your Location</span>
+	                    <input type="text" id="user_location" class="form-control" placeholder="1234 parkway" aria-describedby="basic-addon1">
+	                    <span class="input-group-btn">
+	                    	<button class="btn btn-default" type="button" onclick="getLocation()">Get location</button>
+	                	</span>
+	                </div>
+				</div>
+			</div>
+			<div class="row" style="margin-top:15px">
+				<div class="col-xs-6 col-xs-offset-3">
+					<label class="radio-inline"><input type="radio" name="distanceOpt">5 Miles</label>
+					<label class="radio-inline"><input type="radio" name="distanceOpt">10 Miles</label>
+					<label class="radio-inline"><input type="radio" name="distanceOpt">20 Miles</label>
+					<label class="radio-inline"><input type="radio" name="distanceOpt">Custom</label>
+				</div>
+			</div>
+			<div class="row" style="margin-top:15px">
+				<div class="col-md-12">
+					<div id="mapholder" style="margin:auto"></div>
+				</div>
+			</div>
+			<div class="row" style="margin-top:20px;margin-bottom:20px">
+				<div class="col-xs-6 col-xs-offset-3">
+					<button class="btn btn-default btn-lg" onclick="sendRequest(3)">Give me 3 options</button>
+					<button class="btn btn-danger btn-lg" onclick="sendRequest(1);">Choose for me</button>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div class="container">
-		<div class="jumbotron">
-			<h1 style="text-align:center">Find Lunch!</h1>
-		</div>
-		<div class="row">
-			<div class="col-xs-10 col-xs-offset-1">
-				<div class="input-group" style="float:none">
-                    <span class="input-group-addon" id="basic-addon1">Your Location</span>
-                    <input type="text" id="user_location" class="form-control" placeholder="1234 parkway" aria-describedby="basic-addon1">
-                    <span class="input-group-btn">
-                    	<button class="btn btn-default" type="button" onclick="getLocation()">Get location</button>
-                	</span>
-                </div>
-			</div>
-		</div>
-		<div class="row" style="margin-top:15px">
-			<div class="col-xs-6 col-xs-offset-3">
-				<label class="radio-inline"><input type="radio" name="distanceOpt">5 Miles</label>
-				<label class="radio-inline"><input type="radio" name="distanceOpt">10 Miles</label>
-				<label class="radio-inline"><input type="radio" name="distanceOpt">20 Miles</label>
-				<label class="radio-inline"><input type="radio" name="distanceOpt">Custom</label>
-			</div>
-		</div>
-		<div class="row" style="margin-top:15px">
-			<div class="col-md-12">
-				<div id="mapholder" style="margin:auto"></div>
-			</div>
-		</div>
-		<div class="row" style="margin-top:20px;margin-bottom:20px">
-			<div class="col-xs-6 col-xs-offset-3">
-				<button class="btn btn-default btn-lg" onclick="sendRequest(3)">Give me 3 options</button>
-				<button class="btn btn-danger btn-lg" onclick="sendRequest(1);">Choose for me</button>
-			</div>
-		</div>
-	</div>
-</div>
-</body>
+	
 </html>

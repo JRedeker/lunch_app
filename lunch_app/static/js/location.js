@@ -1,4 +1,8 @@
 var x = document.getElementById("location");
+
+
+
+
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
@@ -62,3 +66,6 @@ function showError(error) {
             break;
     }
 }
+$( document ).ready(function() {
+    getLocation();
+});
