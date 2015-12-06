@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -53,33 +54,39 @@
 		<div class="container">
 			
 			<div class="row">
-				<div class="col-xs-10 col-xs-offset-1">
-					<div class="input-group" style="float:none">
-	                    <span class="input-group-addon" id="basic-addon1">Your Location</span>
-	                    <input type="text" id="user_location" class="form-control" placeholder="1234 parkway" aria-describedby="basic-addon1">
+				<div class="col-xs-12" style="text-align:center">
+					<div class="input-group" style="float:none;margin:auto">
+	                    <input type="text" id="user_location" class="form-control" placeholder="1234 parkway">
 	                    <span class="input-group-btn">
-	                    	<button class="btn btn-default" type="button" onclick="getLocation()">Get location</button>
+	                    	<button type="button" class="btn btn-default" aria-label="Left Align">
+							  <span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span>
+							</button>
 	                	</span>
 	                </div>
 				</div>
 			</div>
-			<div class="row" style="margin-top:15px">
-				<div class="col-xs-6 col-xs-offset-3">
-					<label class="radio-inline"><input type="radio" name="distanceOpt">5 Miles</label>
-					<label class="radio-inline"><input type="radio" name="distanceOpt">10 Miles</label>
-					<label class="radio-inline"><input type="radio" name="distanceOpt">20 Miles</label>
-					<label class="radio-inline"><input type="radio" name="distanceOpt">Custom</label>
+
+			<div class="row" style="margin-top:15px;">
+				<div class="col-xs-12 col-sm-5" style="text-align:center">
+					<div class="input-group"> <span class="input-group-addon">Show options within:</span>
+	                    <select id="radius" class="selectpicker form-control" data-live-search="true" title="Please select a radius ...">
+	                        <option>5 miles</option>
+	                        <option>10 miles</option>
+	                        <option>15 miles</option>
+	                        <option>25 miles</option>
+                        </select>
+	                </div>
 				</div>
 			</div>
 			<div class="row" style="margin-top:15px">
-				<div class="col-md-12">
+				<div class="col-xs-12">
 					<div id="mapholder" style="margin:auto"></div>
 				</div>
 			</div>
-			<div class="row" style="margin-top:20px;margin-bottom:20px">
-				<div class="col-xs-6 col-xs-offset-3">
-					<button class="btn btn-default btn-lg" onclick="sendRequest(3)">Give me 3 options</button>
-					<button class="btn btn-danger btn-lg" onclick="sendRequest(1);">Choose for me</button>
+			<div class="row" style="margin-top:20px;margin-bottom:20px;text-align:center">
+				<div class="col-xs-12">
+					<button class="btn btn-danger btn-md" onclick="sendRequest(1);">Choose for me</button>
+					<button class="btn btn-default btn-md" onclick="sendRequest(3)">Give me 3 options</button>
 				</div>
 			</div>
 		</div>
