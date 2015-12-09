@@ -10,3 +10,14 @@ Contribs:
 Joe Gorsky
 Ben Marti
 Jon Redeker
+
+# Dependencies
+
+1. Python
+  * Pip
+  * Flask
+2. Apache2
+3. Node.js
+4. NPM
+5. bower
+  * polymer
