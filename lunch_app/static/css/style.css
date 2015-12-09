@@ -14,3 +14,16 @@
 .navbar-default .navbar-brand {
     color: #fff;
 }
+.flatbutton{
+
+	background-color:#00796B;
+	color:#fff;
+
+}
+
+
+.flatbutton:hover{
+
+	background-color:#009688;
+
+}
