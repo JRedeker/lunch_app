@@ -18,6 +18,9 @@ def page_not_found(e):
 def test():
     return render_template('index-test.html')
 
+@app.route("/card")
+def card():
+    return render_template('card.html')
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0',port=8080)
