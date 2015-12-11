@@ -14,3 +14,38 @@
 .navbar-default .navbar-brand {
     color: #fff;
 }
+.flatbutton{
+
+	background-color:#00796B;
+	color:#fff;
+
+}
+
+
+.flatbutton:hover{
+
+	background-color:#009688;
+
+}
+
+.dark-primary-color{ 
+	background: #00796B; 
+}
+.default-primary-color{ background: #009688; }
+.light-primary-color{ background: #B2DFDB; }
+.text-primary-color{ color: #FFFFFF; }
+.accent-color{ background: #FF5252; }
+.primary-text-color    { color: #212121; }
+.secondary-text-color  { color: #727272; }
+.divider-color         { border-color: #B6B6B6; }
+
+
+.width{
+	width:100%;
+	margin-bottom: 20px;
+}
+
+a {
+
+	color:#fff;
+}
