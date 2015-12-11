@@ -49,3 +49,17 @@ a {
 
 	color:#fff;
 }
+
+.header.paper-card .title-text.paper-card{
+
+	background-attachment: fixed;
+
+	padding:0px;
+	height:200px;
+
+	background-image: url("../images/stock1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+}
