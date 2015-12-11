@@ -1,0 +1,18 @@
+{
+  "name": "lunch_app",
+  "homepage": "https://github.com/JRedeker/lunch_app",
+  "authors": [
+    "Jon Redeker <jon.redeker@gmail.com>"
+  ],
+  "description": "a lunch app",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
