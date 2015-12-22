@@ -1,0 +1,26 @@
+{
+  "name": "lunch_app",
+  "homepage": "https://github.com/JRedeker/lunch_app",
+  "authors": [
+    "Jon Redeker <jon.redeker@gmail.com>",
+    "William Marti <kareas1115@gmail.com>"
+  ],
+  "description": "Lunch App (lunchapp.xyz)",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap": "~3.3.6",
+    "jquery": "~2.1.4",
+    "bootstrap-material-design": "~0.5.6"
+  }
+}

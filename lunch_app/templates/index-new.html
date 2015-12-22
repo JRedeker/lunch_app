@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+{% block body %}
+	<div class="bs-component">
+          <div class="navbar navbar-default">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="javascript:void(0)">Lunch App<div class="ripple-container"></div></a>
+              </div>
+              <div class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="javascript:void(0)">Home</a></li>
+                  
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="javascript:void(0)">GitHub Page</a></li>
+                  <li class="dropdown">
+                    <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Contact Us
+                      <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="javascript:void(0)">Email us</a></li>
+                      <li><a href="javascript:void(0)">Tweet at us</a></li>
+                      <li><a href="javascript:void(0)">Say thanks</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div></div>
+
+	<div class="container-fluid">
+		<div class="jumbotron">
+			<h1>Stop the indecision.</h1>
+			<p>Set your location, tell us what you like, and go get lunch.</p>
+		</div>
+
+		<div class="well bs-component">
+          <form class="form-horizontal">
+            <fieldset>
+              <legend>Legend</legend>
+
+			<div class="row">
+				<div class="col-xs-12" style="text-align:center">
+					<div class="input-group" style="float:none;margin:auto">
+	                    <input type="text" id="user_location" class="form-control" placeholder="1234 parkway">
+	                    <span class="input-group-btn">
+	                    	<button type="button" class="btn btn-default" aria-label="Left Align" onclick="getLocation()">
+							  <span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span>
+							</button>
+	                	</span>
+	                </div>
+				</div>
+			</div>
+
+			<div class="row" style="margin-top:15px;">
+				<div class="col-xs-12 col-sm-5" style="text-align:center">
+					<div class="form-group">
+		                <label for="select111" class="col-md-2 control-label">Show options within:</label>
+
+		                <div class="col-md-10">
+		                  <select id="radius" class="form-control">
+		                    <option>5 miles</option>
+	                        <option>10 miles</option>
+	                        <option>15 miles</option>
+	                        <option>25 miles</option>
+		                  </select>
+		                </div>
+		              <span class="material-input"></span>
+	              	</div>
+					<div class="input-group"> <span class="input-group-addon">Show options within:</span>
+	                    <select id="radius" class="selectpicker form-control" data-live-search="true" title="Please select a radius ...">
+	                        <option>5 miles</option>
+	                        <option>10 miles</option>
+	                        <option>15 miles</option>
+	                        <option>25 miles</option>
+                        </select>
+	                </div>
+
+				</div>
+			</div>
+			<div class="row" style="margin-top:15px">
+				<div class="col-xs-12">
+					<div id="mapholder" style="margin:auto"></div>
+				</div>
+			</div>
+			<div class="row" style="margin-top:20px;margin-bottom:20px;text-align:center">
+				<div class="col-xs-12">
+					<button class="btn btn-raised btn-danger btn-md" onclick="sendRequest(1);">Choose for me</button>
+					<button class="btn btn-raised btn-default btn-md" onclick="sendRequest(3)">Give me 3 options</button>
+				</div>
+			</div>
+            </fieldset>
+          </form>
+        <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div></div>
+
+		<div class="container">
+			
+		</div>
+	</div>
+{% endblock %}
+</body>
+</html>
