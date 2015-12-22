@@ -1,4 +1,8 @@
 var x = document.getElementById("location");
+
+
+
+
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition, showError);
@@ -11,7 +15,8 @@ function showPosition(position) {
     lat = position.coords.latitude;
     lon = position.coords.longitude;
     latlon = new google.maps.LatLng(lat, lon)
-    var width = window.screen.availWidth * .5;
+    var width = window.innerWidth * .8;
+    //var width = window.screen.availWidth * .8;
     var height = width * .5;
     mapholder = document.getElementById('mapholder')
     mapholder.style.height = height+'px';
@@ -24,15 +29,26 @@ function showPosition(position) {
     navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
     }
     
-    updateAddress(latlon);
+    
     var map = new google.maps.Map(document.getElementById("mapholder"), myOptions);
     var marker = new google.maps.Marker({position:latlon,map:map,title:"You are here!"});
+
+    updateAddress(lat,lon);
+    
 }
 
-function updateAddress(latlon) {
-    var address = $.ajax("https://maps.googleapis.com/maps/api/geocode/json?latlng=44.4647452,7.3553838&sensor=true)");
-    console.log(address);
+function updateAddress(lat,lon) {
 
+    var addressresult = "";
+
+    $.ajax({
+        url: "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + lon + "&sensor=true)",
+        success: function(data) {
+            console.log("here");
+            $("#user_location").val(data.results[0].formatted_address);
+        }
+    })
+    return addressresult;
     
 }
 
@@ -52,3 +68,6 @@ function showError(error) {
             break;
     }
 }
+$( document ).ready(function() {
+    getLocation();
+});
