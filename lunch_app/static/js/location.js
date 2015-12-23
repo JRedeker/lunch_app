@@ -15,7 +15,8 @@ function showPosition(position) {
     lat = position.coords.latitude;
     lon = position.coords.longitude;
     latlon = new google.maps.LatLng(lat, lon)
-    var width = window.screen.availWidth * .5;
+    var width = window.innerWidth * .8;
+    //var width = window.screen.availWidth * .8;
     var height = width * .5;
     mapholder = document.getElementById('mapholder')
     mapholder.style.height = height+'px';
@@ -43,6 +44,7 @@ function updateAddress(lat,lon) {
     $.ajax({
         url: "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + lon + "&sensor=true)",
         success: function(data) {
+            console.log("here");
             $("#user_location").val(data.results[0].formatted_address);
         }
     })

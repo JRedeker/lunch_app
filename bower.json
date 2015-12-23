@@ -2,14 +2,12 @@
   "name": "lunch_app",
   "homepage": "https://github.com/JRedeker/lunch_app",
   "authors": [
+    "Jon Redeker <jon.redeker@gmail.com>",
     "William Marti <kareas1115@gmail.com>"
   ],
-  "description": "Lunch App",
+  "description": "Lunch App (lunchapp.xyz)",
   "main": "",
   "moduleType": [],
-  "keywords": [
-    "Lunch"
-  ],
   "license": "MIT",
   "private": true,
   "ignore": [
@@ -19,8 +17,10 @@
     "test",
     "tests"
   ],
-  "dependencies": {
-    "polymer": "Polymer/polymer#^1.2.0",
-    "paper-elements": "PolymerElements/paper-elements#~1.0.6"
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap": "~3.3.6",
+    "jquery": "~2.1.4",
+    "bootstrap-material-design": "~0.5.6"
   }
 }
