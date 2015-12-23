@@ -45,16 +45,23 @@ params = {'term': searchTerm,
 
 request = yelpAuth.get(url, params = params)
 
-json = request.json()
+requestJSON = request.json()
 
 
-name = json['businesses'][0]['name']
-phone = json['businesses'][0]['display_phone']
-street_address = json['businesses'][0]['location']['address']
-city = json['businesses'][0]['location']['city']
-state = json['businesses'][0]['location']['state_code']
-postal_code = json['businesses'][0]['location']['postal_code']
-image_url = json['businesses'][0]['image_url']
+name = requestJSON['businesses'][0]['name']
+phone = requestJSON['businesses'][0]['display_phone']
+street_address = requestJSON['businesses'][0]['location']['address']
+city = requestJSON['businesses'][0]['location']['city']
+state = requestJSON['businesses'][0]['location']['state_code']
+postal_code = requestJSON['businesses'][0]['location']['postal_code']
+image_url = requestJSON['businesses'][0]['image_url']
 
-pprint(json)
-#print(json.dump({'name': name , 'address': street_address, 'phone': phone, 'image_url': image_url})
+standardJSON = { 'name' : name,
+            'street address' : street_address,
+            'city' : city,
+            'state' : state,
+            'postal_code' : postal_code,
+            'image_url': image_url
+            }
+
+return(json.dumps(standardJSON))
