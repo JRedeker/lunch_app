@@ -2,10 +2,11 @@
 
 from flask import Flask
 from flask import render_template
-from flask import Response		
-from requests_oauthlib import OAuth1Session		
-import requests		
+from flask import Response
+from requests_oauthlib import OAuth1Session
+import requests
 import json
+
 
 
 app = Flask(__name__)
