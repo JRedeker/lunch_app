@@ -40,74 +40,100 @@
         <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div></div>
 
 	<div class="container-fluid">
-		<div class="jumbotron">
-			<h1>Stop the indecision.</h1>
-			<p>Set your location, tell us what you like, and go get lunch.</p>
+
+		<div class="row">
+
+			<div class="col-xs-12 col-md-10 col-md-offset-1">
+
+				<div class="jumbotron">
+					<h1>Stop the indecision.</h1>
+					<p>Set your location, tell us what you like, and go get lunch.</p>
+				</div>
+
+
+
+			</div>
+
+
 		</div>
+		
+		<div class="row">
 
-		<div class="well bs-component">
-          <form class="form-horizontal">
-            <fieldset>
-              <legend>Legend</legend>
+			<div class="col-xs-12 col-md-10 col-md-offset-1">
+				<div class="well bs-component">
 
-			<div class="row">
-				<div class="col-xs-12" style="text-align:center">
-					<div class="input-group" style="float:none;margin:auto">
-	                    <input type="text" id="user_location" class="form-control" placeholder="1234 parkway">
-	                    <span class="input-group-btn">
-	                    	<button type="button" class="btn btn-default" aria-label="Left Align" onclick="getLocation()">
-							  <span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span>
-							</button>
-	                	</span>
-	                </div>
-				</div>
-			</div>
+		        	<form class="form-horizontal">
 
-			<div class="row" style="margin-top:15px;">
-				<div class="col-xs-12 col-sm-5" style="text-align:center">
-					<div class="form-group">
-		                <label for="select111" class="col-md-2 control-label">Show options within:</label>
+			            <fieldset>
 
-		                <div class="col-md-10">
-		                  <select id="radius" class="form-control">
-		                    <option>5 miles</option>
-	                        <option>10 miles</option>
-	                        <option>15 miles</option>
-	                        <option>25 miles</option>
-		                  </select>
-		                </div>
-		              <span class="material-input"></span>
-	              	</div>
-					<div class="input-group"> <span class="input-group-addon">Show options within:</span>
-	                    <select id="radius" class="selectpicker form-control" data-live-search="true" title="Please select a radius ...">
-	                        <option>5 miles</option>
-	                        <option>10 miles</option>
-	                        <option>15 miles</option>
-	                        <option>25 miles</option>
-                        </select>
-	                </div>
+			            	<legend>Legend</legend>
 
-				</div>
-			</div>
-			<div class="row" style="margin-top:15px">
-				<div class="col-xs-12">
-					<div id="mapholder" style="margin:auto"></div>
-				</div>
-			</div>
-			<div class="row" style="margin-top:20px;margin-bottom:20px;text-align:center">
-				<div class="col-xs-12">
-					<button class="btn btn-raised btn-danger btn-md" onclick="sendRequest(1);">Choose for me</button>
-					<button class="btn btn-raised btn-default btn-md" onclick="sendRequest(3)">Give me 3 options</button>
-				</div>
-			</div>
-            </fieldset>
-          </form>
-        <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div></div>
+							<div class="row">
+								<div class="col-xs-12" style="text-align:center">
+									<div class="input-group" style="float:none;margin:auto">
+					                    <input type="text" id="user_location" class="form-control" placeholder="1234 parkway">
+					                    <span class="input-group-btn">
+					                    	<button type="button" class="btn btn-default" aria-label="Left Align" onclick="getLocation()">
+											  <span class="glyphicon glyphicon-screenshot" aria-hidden="true"></span>
+											</button>
+					                	</span>
+					                </div>
+								</div>
+							</div>
 
-		<div class="container">
-			
-		</div>
+							<div class="row" style="margin-top:15px;">
+								
+								<div class="col-xs-12 col-sm-5" style="text-align:center">
+
+									<div class="form-group">
+						                <label for="select111" class="col-md-4 control-label">Show options within:</label>
+
+						                <div class="col-md-8">
+						                  <select id="radius" class="form-control">
+						                    <option>5 miles</option>
+					                        <option>10 miles</option>
+					                        <option>15 miles</option>
+					                        <option>25 miles</option>
+						                  </select>
+						                </div>
+						              <span class="material-input"></span>
+
+					              	</div>
+
+								</div>
+
+							</div>
+
+							<div class="row" style="margin-top:15px">
+								<div class="col-xs-12">
+									<div id="mapholder" style="margin:auto"></div>
+								</div>
+							</div>
+
+							<div class="row" style="margin-top:20px;margin-bottom:20px;text-align:center">
+								<div class="col-xs-12">
+									<button class="btn btn-raised btn-danger btn-md" onclick="sendRequest(1);">Choose for me</button>
+									<button class="btn btn-raised btn-default btn-md" onclick="sendRequest(3)">Give me 3 options</button>
+								</div>
+
+							</div>
+
+			            </fieldset>
+
+		        	</form>
+
+		        	<div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
+
+		    	</div>
+
+		    </div>
+
+		</div>    
+
 	</div>
+
 {% endblock %}
+
 </body>
+
 </html>
