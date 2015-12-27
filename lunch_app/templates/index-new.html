@@ -60,6 +60,7 @@
 		<div class="row">
 
 			<div class="col-xs-12 col-md-10 col-md-offset-1">
+				
 				<div class="well bs-component">
 
 		        	<form class="form-horizontal">
@@ -83,12 +84,15 @@
 
 							<div class="row" style="margin-top:15px;">
 								
-								<div class="col-xs-12 col-sm-5" style="text-align:center">
+								<div class="col-md-12 col-xs-12" style="text-align:center">
 
 									<div class="form-group">
-						                <label for="select111" class="col-md-4 control-label">Show options within:</label>
 
-						                <div class="col-md-8">
+
+
+						                <label for="select111" class="col-md-1 control-label">Show options within:</label>
+
+						                <div class="col-md-2">
 						                  <select id="radius" class="form-control">
 						                    <option>5 miles</option>
 					                        <option>10 miles</option>
@@ -96,9 +100,89 @@
 					                        <option>25 miles</option>
 						                  </select>
 						                </div>
-						              <span class="material-input"></span>
 
+
+						                <div class="dropdown col-md-2">
+										  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+										    Exclude Types
+										    <span class="caret"></span>
+										  </button>
+										  <ul class="dropdown-menu dropdown-menu-form" aria-labelledby="dropdownMenu1">
+										    <li>
+										    	<div id="asian" class="checkbox excludecheckbox">
+
+							                		<label class='foodtypelabel'>
+
+								                    	<input type="checkbox"></input>
+
+									                    <span class="checkbox-material">
+									                     	<span class="check"></span>
+									                    </span>
+									                    Asian
+
+							                    	</label>
+
+							                    </div>
+							                </li>
+										    <li>
+										    	<div id="italian" class="checkbox excludecheckbox">
+
+							                		<label class='foodtypelabel'>
+
+								                    	<input type="checkbox"></input>
+
+									                    <span class="checkbox-material">
+									                     	<span class="check"></span>
+									                    </span>
+									                    Italian
+
+							                    	</label>
+
+							                    </div>
+							                </li>
+
+										    <li>
+										    	<div id="mexican" class="checkbox excludecheckbox">
+
+							                		<label class='foodtypelabel'>
+
+								                    	<input type="checkbox"></input>
+
+									                    <span class="checkbox-material">
+									                     	<span class="check"></span>
+									                    </span>
+									                    Mexican
+
+							                    	</label>
+
+							                    </div>
+							                </li>
+
+							                <li>
+										    	<div id="american" class="checkbox excludecheckbox">
+
+							                		<label class='foodtypelabel'>
+
+								                    	<input type="checkbox"></input>
+
+									                    <span class="checkbox-material">
+									                     	<span class="check"></span>
+									                    </span>
+									                    American
+
+							                    	</label>
+
+							                    </div>
+							                </li>
+
+										  </ul>
+										</div>
+
+
+
+						              
 					              	</div>
+
 
 								</div>
 
@@ -115,6 +199,18 @@
 									<button class="btn btn-raised btn-danger btn-md" onclick="sendRequest(1);">Choose for me</button>
 									<button class="btn btn-raised btn-default btn-md" onclick="sendRequest(3)">Give me 3 options</button>
 								</div>
+
+
+							<br/>
+							<ul class="dropdown-menu dropdown-menu-form">
+							  <li><label class="checkbox"><input type="checkbox">One</label></li>
+							  <li><label class="checkbox"><input type="checkbox">Two</label></li>
+							</ul>
+
+
+
+
+
 
 							</div>
 
