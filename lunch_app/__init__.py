@@ -27,6 +27,10 @@ def page_not_found(e):
 def test():
     return render_template('index.html')
 
+@app.route("/testajax")
+def testajax():
+    return "worked"
+
 @app.route("/api/1/getYelpData")
 def yelpData():
     #Yelp Authentication documentation [OAuth 1.0]: https://www.yelp.com/developers/documentation/v2/authentication

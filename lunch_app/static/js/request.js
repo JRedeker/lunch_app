@@ -10,6 +10,32 @@ function sendRequest(n) {
 
 }
 
+
+
+
+$( document ).ready(function() {
+    $( "#test" ).click(function() {
+	  console.log( "lol" );
+
+		
+		$.ajax({
+			method: "POST",
+			url: "/testajax",
+			success:function(data) {
+
+				console.log("success!");
+
+      		}
+		})
+		  
+
+	  	
+	});
+
+});
+
+
+
 // Allow Bootstrap dropdown menus to have forms/checkboxes inside, 
 // and when clicking on a dropdown item, the menu doesn't disappear.
 $(document).on('click', '.dropdown-menu.dropdown-menu-form', function(e) {
