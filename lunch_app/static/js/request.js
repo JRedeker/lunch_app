@@ -14,16 +14,16 @@ function sendRequest(n) {
 
 
 $( document ).ready(function() {
-    $( "#test" ).click(function() {
+    $( "#chooseforme" ).click(function() {
 	  console.log( "lol" );
 
 		
 		$.ajax({
 			method: "POST",
-			url: "/testajax",
+			url: "http://localhost:8080/api/1/getYelpData",
 			success:function(data) {
 
-				console.log("success!");
+				console.log( JSON.stringify(data, null, 2) ); 
 
       		}
 		})
