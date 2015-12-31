@@ -27,6 +27,10 @@ def page_not_found(e):
 def test():
     return render_template('index.html')
 
+@app.route("/testajax")
+def testajax():
+    return "worked"
+
 @app.route("/api/1/getYelpData")
 def yelpData():
     #Yelp Authentication documentation [OAuth 1.0]: https://www.yelp.com/developers/documentation/v2/authentication
@@ -89,6 +93,12 @@ def yelpData():
                 }
 
     return Response(json.dumps(standardJSON), mimetype='application/json')
+
+@app.after_request
+def add_header(response):
+    response.cache_control.max_age = 300
+    return response
+    
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0',port=8080)

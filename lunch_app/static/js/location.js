@@ -1,4 +1,4 @@
-var x = document.getElementById("location");
+ovar x = document.getElementById("location");
 
 
 
