@@ -94,5 +94,11 @@ def yelpData():
 
     return Response(json.dumps(standardJSON), mimetype='application/json')
 
+@app.after_request
+def add_header(response):
+    response.cache_control.max_age = 300
+    return response
+    
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0',port=8080)
