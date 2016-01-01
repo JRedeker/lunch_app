@@ -20,7 +20,7 @@ $( document ).ready(function() {
 		
 		$.ajax({
 			method: "POST",
-			url: "http://localhost:8080/api/1/getYelpData",
+			url: "api/1/getYelpData",
 			success:function(data) {
 
 				console.log( JSON.stringify(data, null, 2) ); 
