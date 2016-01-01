@@ -24,3 +24,9 @@
     body{font-size: 14px;}
 }
 
+li > a:hover {
+
+	color:#fff !important;
+
+
+}

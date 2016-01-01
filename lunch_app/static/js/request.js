@@ -24,7 +24,17 @@ $( document ).ready(function() {
 			success:function(data) {
 
 				console.log( JSON.stringify(data, null, 2) ); 
+				var name = jQuery.parseJSON( '{ "name": "John" }' );
 
+				//console.log("JSON PARSE: " + data["name"]);
+
+				$( "#result1").css( "display", "block" );
+
+				$( "#result1content" ).append("<h2>" +  data["name"] + "</h2>" );
+
+				$( "#result1content" ).append("<div>" + data["street address"][0] + "</br>" + data["city"] + ", " + data["state"] + " " + data["postal_code"] + "</div>" );
+
+				$( "#result1content" ).append("<img src='" + data["image_url"] + "'/>" );
       		}
 		})
 		  
