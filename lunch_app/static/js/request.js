@@ -14,17 +14,27 @@ function sendRequest(n) {
 
 
 $( document ).ready(function() {
-    $( "#test" ).click(function() {
+    $( "#chooseforme" ).click(function() {
 	  console.log( "lol" );
 
 		
 		$.ajax({
 			method: "POST",
-			url: "/testajax",
+			url: "http://localhost:8080/api/1/getYelpData",
 			success:function(data) {
 
-				console.log("success!");
+				console.log( JSON.stringify(data, null, 2) ); 
+				var name = jQuery.parseJSON( '{ "name": "John" }' );
 
+				//console.log("JSON PARSE: " + data["name"]);
+
+				$( "#result1").css( "display", "block" );
+
+				$( "#result1content" ).append("<h2>" +  data["name"] + "</h2>" );
+
+				$( "#result1content" ).append("<div>" + data["street address"][0] + "</br>" + data["city"] + ", " + data["state"] + " " + data["postal_code"] + "</div>" );
+
+				$( "#result1content" ).append("<img src='" + data["image_url"] + "'/>" );
       		}
 		})
 		  
