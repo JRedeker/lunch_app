@@ -7,9 +7,12 @@ from requests_oauthlib import OAuth1Session
 import requests
 import json
 
+from flask.ext.cors import CORS
+
 
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/")
 def index():

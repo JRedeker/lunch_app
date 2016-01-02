@@ -15,14 +15,13 @@ function sendRequest(n) {
 
 $( document ).ready(function() {
     $( "#chooseforme" ).click(function() {
-	  console.log( "lol" );
+	  
 
 		
 		$.ajax({
 			method: "POST",
 			url: "api/1/getYelpData",
 			success:function(data) {
-
 				console.log( JSON.stringify(data, null, 2) ); 
 				var name = jQuery.parseJSON( '{ "name": "John" }' );
 
@@ -35,7 +34,7 @@ $( document ).ready(function() {
 				$( "#result1content" ).append("<div>" + data["street address"][0] + "</br>" + data["city"] + ", " + data["state"] + " " + data["postal_code"] + "</div>" );
 
 				$( "#result1content" ).append("<img src='" + data["image_url"] + "'/>" );
-      		}
+   	   		}
 		})
 		  
 
