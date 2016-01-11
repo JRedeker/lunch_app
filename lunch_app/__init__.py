@@ -14,9 +14,9 @@ def page_not_found(e):
 def page_not_found(e):
     return render_template('500.html')
 
-@app.route("/old")
+@app.route("/new")
 def test():
-    return render_template('index.html')
+    return render_template('index-mdl.html')
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0',port=8080)

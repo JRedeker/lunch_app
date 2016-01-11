@@ -17,7 +17,9 @@
     "test",
     "tests"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "material-design-lite": "~1.0.6"
+  },
   "devDependencies": {
     "bootstrap": "~3.3.6",
     "jquery": "~2.1.4",
