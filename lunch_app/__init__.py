@@ -3,16 +3,16 @@
 from flask import Flask
 from flask import render_template
 from flask import Response
-#from requests_oauthlib import OAuth1Session
+from requests_oauthlib import OAuth1Session
 import requests
 import json
 
-#from flask.ext.cors import CORS
+from flask.ext.cors import CORS
 
 
 
 app = Flask(__name__)
-#CORS(app)
+CORS(app)
 
 @app.route("/")
 def index():
@@ -30,7 +30,6 @@ def page_not_found(e):
 def test():
     return render_template('index-new.html')
 
-'''
 
 @app.route("/testajax", methods=['POST'])
 def testajax():
@@ -105,6 +104,5 @@ def add_header(response):
     response.cache_control.max_age = 300
     return response
     
-'''
 if __name__ == "__main__":
     app.run(host='0.0.0.0',port=8080)
