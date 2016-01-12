@@ -30,6 +30,8 @@ def page_not_found(e):
 def test():
     return render_template('index-new.html')
 
+'''
+
 @app.route("/testajax", methods=['POST'])
 def testajax():
     print "HELLOOOOOOOOOOOOOO"
@@ -103,6 +105,6 @@ def add_header(response):
     response.cache_control.max_age = 300
     return response
     
-
+'''
 if __name__ == "__main__":
     app.run(host='0.0.0.0',port=8080)

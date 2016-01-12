@@ -1,4 +1,4 @@
-ovar x = document.getElementById("location");
+var x = document.getElementById("location");
 
 
 
@@ -15,9 +15,6 @@ function showPosition(position) {
     lat = position.coords.latitude;
     lon = position.coords.longitude;
     latlon = new google.maps.LatLng(lat, lon)
-    var width = window.innerWidth * .8;
-    //var width = window.screen.availWidth * .8;
-    var height = width * .5;
     mapholder = document.getElementById('mapholder')
 
     var myOptions = {
