@@ -50,6 +50,7 @@ a {
 	color:#fff;
 }
 
+<<<<<<< HEAD
 .header.paper-card .title-text.paper-card{
 
 	background-attachment: fixed;
@@ -98,3 +99,39 @@ h2 span {
   padding:3px 20px;
 
 }
+=======
+.lunch-card-wide.mdl-card {
+    margin-top: 10px;
+    margin-bottom: 10px;
+	width: 100%;
+}
+.lunch-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  
+}
+#top-card {
+    background: url("../images/food-salad-restaurant-person.jpg") center / cover;
+}
+#second-card {
+    background: url("../images/food-restaurant-hand-dinner.jpg") center / cover;
+}
+#radius-card {
+    background: #009688;
+    height: 50px;
+}
+#types-card {
+    background: #FF5252;
+    height: 50px;
+}
+.lunch-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+#star {
+  text-align: center;
+  font-size: 100px;
+  line-height: 500px;
+  color: #ddd;
+}
+>>>>>>> jon_dev

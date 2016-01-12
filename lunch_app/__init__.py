@@ -26,9 +26,9 @@ def page_not_found(e):
 def page_not_found(e):
     return render_template('500.html')
 
-@app.route("/old")
+@app.route("/new")
 def test():
-    return render_template('index.html')
+    return render_template('index-mdl.html')
 
 @app.route("/testajax", methods=['POST'])
 def testajax():

@@ -1,3 +1,8 @@
 {
+<<<<<<< HEAD
   "directory": "lunch_app/static/bower_components"
 }
+=======
+	"directory": "lunch_app/static/bower_components/"
+}
+>>>>>>> jon_dev

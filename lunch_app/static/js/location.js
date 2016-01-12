@@ -19,8 +19,6 @@ function showPosition(position) {
     //var width = window.screen.availWidth * .8;
     var height = width * .5;
     mapholder = document.getElementById('mapholder')
-    mapholder.style.height = height+'px';
-    mapholder.style.width = width+'px';
 
     var myOptions = {
     center:latlon,zoom:14,
