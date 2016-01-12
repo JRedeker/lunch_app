@@ -9,12 +9,12 @@
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <span class="mdl-layout-title">Title</span>
+      <span class="mdl-layout-title">Lunch App.xyz</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link" href="">Link</a>
+        <a class="mdl-navigation__link is-active" href="">Home</a>
         <a class="mdl-navigation__link" href="">Link</a>
         <a class="mdl-navigation__link" href="">Link</a>
         <a class="mdl-navigation__link" href="">Link</a>
@@ -24,16 +24,98 @@
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">Title</span>
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="">Link</a>
+      <a class="mdl-navigation__link is-active" href="http://lunchapp.xyz">Home</a>
       <a class="mdl-navigation__link" href="">Link</a>
       <a class="mdl-navigation__link" href="">Link</a>
       <a class="mdl-navigation__link" href="">Link</a>
     </nav>
   </div>
   <main class="mdl-layout__content">
-    <div class="page-content"><!-- Your content goes here --></div>
+  <!--Content goes here -->
+
+    <div class="page-content">
+    	<div class="container">
+    		<div class="lunch-card-wide mdl-card mdl-shadow--2dp">
+    		  <div class="mdl-card__title" id="top-card">
+    		    <h2 class="mdl-card__title-text">Timefor<strong>lunch</strong></h2>
+    		  </div>
+    		  <div class="mdl-card__supporting-text">
+    		  	Don't waste your time deciding.  
+    		  	Whether it's the whole team or just you, find a new place and get eating.
+    		  </div>
+    		  <div class="mdl-card__actions mdl-card--border">
+    		    <button id="fromhere" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    		      Get Started
+    		    </button>
+    		  </div>
+    		  <div class="mdl-card__menu">
+    		  </div>
+    		</div>
+    	</div>
+
+    	<div id="star">&star;</div>
+
+    	<div class="container" id="gohere">
+    		<div class="lunch-card-wide mdl-card mdl-shadow--2dp">
+    			<div class="mdl-card__title" id="second-card">
+    			</div>
+    			<div class="mdl-card__supporting-text">
+    				Answer a few questions, and we'll get you on your way
+    			</div>
+    		</div>
+    	</div>
+    	<div class="container">
+    		<div class="lunch-card-wide mdl-card mdl-shadow--2dp">
+    			<div class="mdl-card__title" id="location-card">
+    			</div>
+    			<div class="mdl-card__supporting-text">
+    			</div>
+    		</div>
+    	</div>
+    	<div class="container">
+    		<div class="lunch-card-wide mdl-card mdl-shadow--2dp">
+    			<div class="mdl-card__title" id="radius-card">
+    			</div>
+    			<div class="mdl-card__supporting-text">
+    			</div>
+    		</div>
+    	</div>
+    	<div class="container">
+    		<div class="lunch-card-wide mdl-card mdl-shadow--2dp">
+    			<div class="mdl-card__title" id="types-card">
+    			</div>
+    			<div class="mdl-card__supporting-text">
+    			</div>
+    		</div>
+    	</div>
+    	<div class="container">
+    		<div class="lunch-card-wide mdl-card mdl-shadow--2dp">
+    			<div class="mdl-card__title" id="give-card">
+    			</div>
+    			<div class="mdl-card__supporting-text">
+    			</div>
+    		</div>
+    	</div>
+    	<div id="star">&star;</div>
+    	<div id="star">&star;</div>
+    	<div id="star">&star;</div>
+    	<div id="star">&star;</div>
+    	<div id="star">&star;</div>
+    </div>
+
+
   </main>
 </div>
+<script>
+    $(document).ready(function (){
+        $("#fromhere").click(function (){ 
+            $('main').animate({
+                scrollTop: $("#gohere").offset().top - 65
+            }, 1000);
+        });
+    });
+</script>
+
 {% endblock %}
 </body>
 </html>
