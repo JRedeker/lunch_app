@@ -18,6 +18,6 @@ Jon Redeker
 3. Node.js
 4. NPM
 5. bower
-  * boostrap
+  * bootstrap
   * jquery
   * material design lite
