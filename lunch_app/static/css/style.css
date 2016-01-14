@@ -125,12 +125,14 @@ h2 span {
   color: #fff;
 }
 
+/*
 #star {
   text-align: center;
   font-size: 100px;
   line-height: 500px;
   color: #ddd;
 }
+*/
 .custom-mdl-checkbox{
 
   margin-bottom:20px;
@@ -157,5 +159,30 @@ h2 span {
 .custom-textfield{
 
   width:100%;
+
+}
+
+#location-card {
+
+  display:none;
+
+}
+#go-card {
+  display:none;
+
+}
+
+#foodtype-card{
+  display:none;
+
+}
+
+#distance-card {
+  display:none;
+
+}
+#description-card{
+
+  display:none;
 
 }
