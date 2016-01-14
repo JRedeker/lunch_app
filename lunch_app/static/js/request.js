@@ -17,10 +17,10 @@ $( document ).ready(function() {
     $( "#chooseforme" ).click(function() {
 	  
 
-		latitude = "34";
-		longitude = "34";
-		searchTerm = "chinese";
-		radius = "5";
+		latitude = "39";
+		longitude = "-77";
+		options = "chinese";
+		distance = "5";
 		resultsLimit = "1";
 
 		
@@ -29,11 +29,9 @@ $( document ).ready(function() {
 			data:{"latitude":latitude, "longitude":longitude, "options":options,
 				  "distance":distance,"resultsLimit":resultsLimit},
 			url: "api/1/getYelpData",
-			success:function(data) {
-				console.log( JSON.stringify(data, null, 2) ); 
-				var name = jQuery.parseJSON( '{ "name": "John" }' );
+			success:function(data) {				
 
-				console.log("JSON PARSE: " + data["name"]);
+				console.log(data);
 
 				$( "#result1").css( "display", "block" );
 
