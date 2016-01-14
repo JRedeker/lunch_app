@@ -84,15 +84,17 @@ def yelpData():
 #    postal_code = requestJSON['businesses'][0]['location']['postal_code']
 #    image_url = requestJSON['businesses'][0]['image_url']
 
+try:
     standardJSON = { 'name' : 'name', #name,
-                'street address' : 'street address', #street_address,
-                'city' : 'city', #city,
-                'state' : 'state', #state,
-                'postal_code' : 'zip', #postal_code,
-                'image_url': 'img url' #image_url
-                }
-
+            'street address' : 'street address', #street_address,
+            'city' : 'city', #city,
+            'state' : 'state', #state,
+            'postal_code' : 'zip', #postal_code,
+            'image_url': 'img url' #image_url
+            }
     return Response(json.dumps(standardJSON), mimetype='application/json')
+except:
+    return Response(json.dumps("bad") mimetype='application/json')
 
 @app.after_request
 def add_header(response):
