@@ -31,7 +31,7 @@ def testajax():
     print "HELLOOOOOOOOOOOOOO"
     return Response("worked", mimetype='html/text')
 
-@app.route("/api/1/getYelpData", methods=['GET, POST'])
+@app.route("/api/1/getYelpData", methods=['POST'])
 def yelpData():
     #Yelp Authentication documentation [OAuth 1.0]: https://www.yelp.com/developers/documentation/v2/authentication
 
