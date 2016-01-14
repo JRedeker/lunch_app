@@ -125,9 +125,64 @@ h2 span {
   color: #fff;
 }
 
+/*
 #star {
   text-align: center;
   font-size: 100px;
   line-height: 500px;
   color: #ddd;
+}
+*/
+.custom-mdl-checkbox{
+
+  margin-bottom:20px;
+
+}
+
+.custom-mdl-radio{
+
+  margin-bottom:20px;
+
+}
+
+.custom-nav-button:hover{
+
+  background-color:#67AEA7;
+  text-decoration: none;
+
+}
+.custom-supporting-text{
+
+  width:100%;
+
+}
+.custom-textfield{
+
+  width:100%;
+
+}
+
+#location-card {
+
+  display:none;
+
+}
+#go-card {
+  display:none;
+
+}
+
+#foodtype-card{
+  display:none;
+
+}
+
+#distance-card {
+  display:none;
+
+}
+#description-card{
+
+  display:none;
+
 }
