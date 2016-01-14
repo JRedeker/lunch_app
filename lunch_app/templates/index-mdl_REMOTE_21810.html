@@ -32,8 +32,8 @@
   <main class="mdl-layout__content">
   <!--Content goes here -->
 
-    <div  class="page-content">
-    	<div id="getstarted-card" class="container">
+    <div class="page-content">
+    	<div class="container">
     		<div class="lunch-card-wide mdl-card mdl-shadow--2dp">
     		  <div class="mdl-card__title" id="top-card">
     		    <h2 class="mdl-card__title-text">Timefor<strong>lunch</strong></h2>
@@ -54,24 +54,24 @@
 
     	<div id="star">&star;</div>
 
-    	<div id="description-card" class="container" id="gohere">
+    	<div class="container" id="gohere">
     		<div class="lunch-card-wide mdl-card mdl-shadow--2dp">
     			<div class="mdl-card__title" id="second-card">
     			</div>
     			<div class="mdl-card__supporting-text">
-    				<h2>Answer a few questions, and we'll get you on your way<h2>
+    				Answer a few questions, and we'll get you on your way
     			</div>
     		</div>
     	</div>
-    	<div id="location-card" class="container">
+    	<div class="container">
     		<div class="lunch-card-wide mdl-card mdl-shadow--2dp">
     			<div class="mdl-card__title" id="mapholder">
     				<h5>Location</h5>
     			</div>
-    			<div class="custom-supporting-text mdl-card__supporting-text" id="location-card-supporting">
-    				<div class="custom-textfield input-group">
-    					<div class="custom-textfield mdl-textfield mdl-js-textfield">
-    					    <input class="custom-textfield mdl-textfield__input" type="text" id="user_location" onchange="codeAddress()">
+    			<div class="mdl-card__supporting-text" id="location-card-supporting">
+    				<div class="input-group">
+    					<div class="mdl-textfield mdl-js-textfield">
+    					    <input class="mdl-textfield__input" type="text" id="user_location" onchange="codeAddress()">
     					</div>
 				    </div>
     			</div>
@@ -82,7 +82,7 @@
 			  	</div>
     		</div>
     	</div>
-    	<div id="distance-card" class="container">
+    	<div class="container">
     		<div class="lunch-card-wide mdl-card mdl-shadow--2dp">
     			<div class="mdl-card__title" id="radius-card">
     				<div class="container">
@@ -119,7 +119,7 @@
     			</div>
     		</div>
     	</div>
-    	<div id="foodtype-card" class="container">
+    	<div class="container">
     		<div class="lunch-card-wide mdl-card mdl-shadow--2dp">
     			<div class="mdl-card__title" id="types-card">
     				<div class="container"><strong>What types of food are in play?</strong></div>
@@ -190,23 +190,32 @@
     			</div>
     		</div>
     	</div>
-    	<div id="go-card" class="container">
+    	<div class="container">
     		<div class="lunch-card-wide mdl-card mdl-shadow--2dp">
     			<div class="mdl-card__title" id="give-card">
     			</div>
     			<div class="mdl-card__supporting-text">
-                    <button id="chooseforme" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                        Choose for me
-                    </button>
     			</div>
     		</div>
     	</div>
-
+    	<div id="star">&star;</div>
+    	<div id="star">&star;</div>
+    	<div id="star">&star;</div>
+    	<div id="star">&star;</div>
     </div>
 
 
   </main>
 </div>
+<script>
+    $(document).ready(function (){
+        $("#fromhere").click(function (){ 
+            $('main').animate({
+                scrollTop: $("#gohere").offset().top - 65
+            }, 1000);
+        });
+    });
+</script>
 
 {% endblock %}
 </body>
