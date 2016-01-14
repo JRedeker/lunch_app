@@ -14,10 +14,14 @@ Jon Redeker
 1. Python
   * Pip
   * Flask
+  * flask_response
+  * requests
+  * requests_oauthlib
+  * json
 2. Apache2
 3. Node.js
 4. NPM
 5. bower
   * bootstrap
   * jquery
-  * material design lite
+  * material design
