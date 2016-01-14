@@ -64,42 +64,42 @@ def yelpData():
 
 
     #Start Session with OAuth Authentication
-#    yelpAuth = OAuth1Session(OAuthAppKey,
-#    		     client_secret=OAuthAppSecret,
-#    		     resource_owner_key=OAuthUserKey,
-#    		     resource_owner_secret=OAuthUserSecret)
-#    #request URL
-#    url='https://api.yelp.com/v2/search'
+    yelpAuth = OAuth1Session(OAuthAppKey,
+    		     client_secret=OAuthAppSecret,
+    		     resource_owner_key=OAuthUserKey,
+    		     resource_owner_secret=OAuthUserSecret)
+    #request URL
+    url='https://api.yelp.com/v2/search'
 
-#    params = {'term': searchTerm,
-#    	 'radius_filter': radius,
-#    	 'limit': resultsLimit,
-#    	 'll':latitude + ',' + longitude}
+    params = {'term': searchTerm,
+    	 'radius_filter': radius,
+    	 'limit': resultsLimit,
+    	 'll':latitude + ',' + longitude}
 
-#    request = yelpAuth.get(url, params = params)
+    request = yelpAuth.get(url, params = params)
 
-#    requestJSON = request.json()
+    requestJSON = request.json()
 
 
-#    name = requestJSON['businesses'][0]['name']
-#    phone = requestJSON['businesses'][0]['display_phone']
-#    street_address = requestJSON['businesses'][0]['location']['address']
-#    city = requestJSON['businesses'][0]['location']['city']
-#    state = requestJSON['businesses'][0]['location']['state_code']
-#    postal_code = requestJSON['businesses'][0]['location']['postal_code']
-#    image_url = requestJSON['businesses'][0]['image_url']
+    name = requestJSON['businesses'][0]['name']
+    phone = requestJSON['businesses'][0]['display_phone']
+    street_address = requestJSON['businesses'][0]['location']['address']
+    city = requestJSON['businesses'][0]['location']['city']
+    state = requestJSON['businesses'][0]['location']['state_code']
+    postal_code = requestJSON['businesses'][0]['location']['postal_code']
+    image_url = requestJSON['businesses'][0]['image_url']
 
     try:
-        standardJSON = { 'name' : OAuthAppKey, #name,
-                'street address' : OAuthUserKey, #street_address,
-                'city' : OAuthAppSecret, #city,
-                'state' : OAuthUserSecret, #state,
-                'postal_code' : 'zip', #postal_code,
-                'image_url': 'img url' #image_url
+        standardJSON = { 'name' : name,
+                'street address' : street_address,
+                'city' : city,
+                'state' : state,
+                'postal_code' : postal_code,
+                'image_url': image_url
                 }
         return Response(json.dumps(standardJSON), mimetype='application/json')
     except:
-        return render_template('index-new.html')
+        return render_template('generic_error.html')
 
 @app.after_request
 def add_header(response):
