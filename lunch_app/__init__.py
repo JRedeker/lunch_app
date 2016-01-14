@@ -39,7 +39,7 @@ def yelpData():
 
     #import API Keys from external file
     try:
-        with open('config.json') as config_file: #config.json will need to exist in flask root, otherwise hardlinking may be necessary
+        with open('/var/www/lunch_app/lunch_app/config.json') as config_file: #config.json will need to exist in flask root, otherwise hardlinking may be necessary
             config = json.load(config_file)
     except:
         return render_template('generic_error.html')
