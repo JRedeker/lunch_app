@@ -17,15 +17,23 @@ $( document ).ready(function() {
     $( "#chooseforme" ).click(function() {
 	  
 
+		latitude = "34";
+		longitude = "34";
+		searchTerm = "chinese";
+		radius = "5";
+		resultsLimit = "1";
+
 		
 		$.ajax({
 			method: "POST",
+			data:{"latitude":latitude, "longitude":longitude, "options":options,
+				  "distance":distance,"resultsLimit":resultsLimit},
 			url: "api/1/getYelpData",
 			success:function(data) {
 				console.log( JSON.stringify(data, null, 2) ); 
 				var name = jQuery.parseJSON( '{ "name": "John" }' );
 
-				//console.log("JSON PARSE: " + data["name"]);
+				console.log("JSON PARSE: " + data["name"]);
 
 				$( "#result1").css( "display", "block" );
 
