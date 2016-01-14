@@ -46,10 +46,10 @@ def yelpData():
 
 
 
-#    OAuthAppKey = config['keys']['yelp']['OAuthAppKey']
-#    OAuthAppSecret = config['keys']['yelp']['OAuthAppSecret']
-#    OAuthUserKey = config['keys']['yelp']['OAuthUserKey']
-#    OAuthUserSecret = config['keys']['yelp']['OAuthUserSecret']
+    OAuthAppKey = config['keys']['yelp']['OAuthAppKey']
+    OAuthAppSecret = config['keys']['yelp']['OAuthAppSecret']
+    OAuthUserKey = config['keys']['yelp']['OAuthUserKey']
+    OAuthUserSecret = config['keys']['yelp']['OAuthUserSecret']
 
 
     ##to be imported via browser/user feedback
@@ -90,10 +90,10 @@ def yelpData():
 #    image_url = requestJSON['businesses'][0]['image_url']
 
     try:
-        standardJSON = { 'name' : 'name', #name,
-                'street address' : 'street address', #street_address,
-                'city' : 'city', #city,
-                'state' : 'state', #state,
+        standardJSON = { 'name' : OAuthAppKey, #name,
+                'street address' : OAuthUserKey, #street_address,
+                'city' : OAuthAppSecret, #city,
+                'state' : OAuthUserSecret, #state,
                 'postal_code' : 'zip', #postal_code,
                 'image_url': 'img url' #image_url
                 }
