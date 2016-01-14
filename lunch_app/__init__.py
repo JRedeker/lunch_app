@@ -38,13 +38,13 @@ def yelpData():
     #Yelp Search API Doc: https://www.yelp.com/developers/documentation/v2/search_api
 
     #import API Keys from external file
-    with open('config.json') as config_file: #config.json will need to exist in flask root, otherwise hardlinking may be necessary
-        config = json.load(config_file)
+#    with open('config.json') as config_file: #config.json will need to exist in flask root, otherwise hardlinking may be necessary
+#        config = json.load(config_file)
 
-    OAuthAppKey = config['keys']['yelp']['OAuthAppKey']
-    OAuthAppSecret = config['keys']['yelp']['OAuthAppSecret']
-    OAuthUserKey = config['keys']['yelp']['OAuthUserKey']
-    OAuthUserSecret = config['keys']['yelp']['OAuthUserSecret']
+#    OAuthAppKey = config['keys']['yelp']['OAuthAppKey']
+#    OAuthAppSecret = config['keys']['yelp']['OAuthAppSecret']
+#    OAuthUserKey = config['keys']['yelp']['OAuthUserKey']
+#    OAuthUserSecret = config['keys']['yelp']['OAuthUserSecret']
 
 
     ##to be imported via browser/user feedback
