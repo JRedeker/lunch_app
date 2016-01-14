@@ -30,12 +30,18 @@ def test():
     return render_template('index-new.html')
 
 
-@app.route("/testajax", methods=['POST'])
+@app.route("/testajax", methods=['GET'])
 def testajax():
     print "HELLOOOOOOOOOOOOOO"
     return Response("worked", mimetype='html/text')
 
-@app.route("/api/1/getYelpData", methods=['POST'])
+@app.route("/api/1/", methods=['GET'])
+def apiIndex():
+   print "www.lunchapp.xyz/api/1/getYelpData"
+   return render_template('500.html')
+   
+
+@app.route("/api/1/getYelpData", methods=['GET'])
 def yelpData():
     #Yelp Authentication documentation [OAuth 1.0]: https://www.yelp.com/developers/documentation/v2/authentication
 
