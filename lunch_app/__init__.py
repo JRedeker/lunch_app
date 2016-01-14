@@ -55,13 +55,18 @@ def yelpData():
     ##to be imported via browser/user feedback
 
     #&ll=latitude,longitude
-    latitude = '42.846319099999995'
-    longitude = '-85.7139251'
+    #latitude = '42.846319099999995'
+    #longitude = '-85.7139251'
 
-    searchTerm = 'chinese food' #&term=   #Search term If term isnt included we search everything.
-    radius = 1609*8 #&radius_filter=    #~1609 meters in 1 mile, Yelp API searches with meters, max value is 40000
-    resultsLimit = '1' #&limit=
+    #searchTerm = 'chinese food' #&term=   #Search term If term isnt included we search everything.
+    #radius = 1609*8 #&radius_filter=    #~1609 meters in 1 mile, Yelp API searches with meters, max value is 40000
+    #resultsLimit = '1' #&limit=
 
+    latitude = request.form['latitude']
+    longitude = request.form['longitude']
+    searchTerm = request.form['options'] #&term=   #Search term If term isnt included we search everything.
+    radius = 1609 * request.form['distance'] #&radius_filter=    #~1609 meters in 1 mile, Yelp API searches with meters, max value is 40000
+    resultsLimit = request.form['resultsLimit'] #&limit=
 
     #Start Session with OAuth Authentication
     yelpAuth = OAuth1Session(OAuthAppKey,
