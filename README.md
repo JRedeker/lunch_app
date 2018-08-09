@@ -9,9 +9,9 @@ Get current location, gives you options for lunch near you
 - Recs based on the tastes of the party
 
 Contribs:
-Joe Gorsky
-Ben Marti
-Jon Redeker
+* [@ramdomthought](https://github.com/ramdomthought)
+* [@WilliamMarti](https://github.com/WilliamMarti)
+* [@JRedeker](https://github.com/JRedeker)
 
 # Dependencies
 
