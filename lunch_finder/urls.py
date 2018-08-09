@@ -4,5 +4,5 @@ from . import views
 
 app_name = 'lunch_finder'
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', views.IndexView.as_view(), name='Index'),
 ]
